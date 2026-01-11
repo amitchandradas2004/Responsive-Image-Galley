@@ -20,16 +20,29 @@
         grid-row: span 2;
       }
       .normal-layout {
-        grid-row:span 2 ;
+        grid-row: span 2;
         grid-column: span 2;
       }
-      .wide-layout{
+      .wide-layout {
         grid-column: span 2;
         grid-row: span 1;
       }
       @media screen and (max-width: 576px) {
-        .container{
+        /* .container{
           display: block;
+        } */
+        .container {
+          display: grid;
+          gap: 3px;
+          grid-template-columns: repeat(2, 1fr);
+          /* grid-template-rows: repeat(6, 150px); */
+        }
+        .normal-layout,
+        .big-layout,
+        .small-layout,
+        .wide-layout{
+           grid-row: span 1;
+           grid-column: span 1;
         }
       }
     </style>
@@ -54,19 +67,19 @@
       <div class="normal-layout">
         <img src="images/F.jpg" alt="" />
       </div>
-      <div class="">
+      <div class="small-layout">
         <img src="images/G.jpg" alt="" />
       </div>
-      <div class="">
+      <div class="small-layout">
         <img src="images/G.jpg" alt="" />
       </div>
       <div class="normal-layout">
         <img src="images/I.jpg" alt="" />
       </div>
-         <div class="">
+      <div class="small-layout">
         <img src="images/G.jpg" alt="" />
       </div>
-      <div class="">
+      <div class="small-layout">
         <img src="images/G.jpg" alt="" />
       </div>
     </div>
